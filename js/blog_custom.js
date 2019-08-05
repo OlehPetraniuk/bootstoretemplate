@@ -188,4 +188,22 @@ $(document).ready(function()
 				});
 			}
 		}
+    }
+    
+    function openMenu()
+	{
+		var menu = $('.page_menu');
+		var menuContent = $('.page_menu_content');
+		TweenMax.set(menuContent, {height:"auto"});
+		TweenMax.from(menuContent, 0.3, {height:0});
+		menuActive = true;
 	}
+
+	function closeMenu()
+	{
+		var menu = $('.page_menu');
+		var menuContent = $('.page_menu_content');
+		TweenMax.to(menuContent, 0.3, {height:0});
+		menuActive = false;
+	}
+});
