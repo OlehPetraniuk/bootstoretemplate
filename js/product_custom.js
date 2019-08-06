@@ -348,4 +348,44 @@ $(document).ready(function()
 				}
 			});
 		}
+    }
+    
+    /* 
+
+	8. Init Color
+
+	*/
+
+	function initColor()
+	{
+		if($('.product_color').length)
+		{
+			var selectedCol = $('#selected_color');
+			var colorItems = $('.color_list li .color_mark');
+			colorItems.each(function()
+			{
+				var colorItem = $(this);
+				colorItem.on('click', function()
+				{
+					var color = colorItem.css('backgroundColor');
+					selectedCol.css('backgroundColor', color);
+				});
+			});
+		}
+	}
+
+	/* 
+
+	9. Init Favorites
+
+	*/
+
+	function initFavs()
+	{
+		// Handle Favorites
+		var fav = $('.product_fav');
+		fav.on('click', function()
+		{
+			fav.toggleClass('active');
+		});
 	}
