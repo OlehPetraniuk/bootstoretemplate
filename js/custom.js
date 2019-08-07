@@ -283,4 +283,43 @@ $(document).ready(function()
 				});	
 			}
 		}
+    }
+    
+    /* 
+
+	6. Init Tab Lines
+
+	*/
+
+	function initTabLines()
+	{
+		if($('.tabs').length)
+		{
+			var tabs = $('.tabs');
+
+			tabs.each(function()
+			{
+				var tabsItem = $(this);
+				var tabsLine = tabsItem.find('.tabs_line span');
+				var tabGroup = tabsItem.find('ul li');
+
+				var posX = $(tabGroup[0]).position().left;
+				tabsLine.css({'left': posX, 'width': $(tabGroup[0]).width()});
+				tabGroup.each(function()
+				{
+					var tab = $(this);
+					tab.on('click', function()
+					{
+						if(!tab.hasClass('active'))
+						{
+							tabGroup.removeClass('active');
+							tab.toggleClass('active');
+							var tabXPos = tab.position().left;
+							var tabWidth = tab.width();
+							tabsLine.css({'left': tabXPos, 'width': tabWidth});
+						}
+					});
+				});
+			});
+		}
 	}
