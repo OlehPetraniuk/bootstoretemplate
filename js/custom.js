@@ -322,4 +322,56 @@ $(document).ready(function()
 				});
 			});
 		}
+    }
+    
+    /* 
+
+	7. Init Tabs
+
+	*/
+
+	function initTabs()
+	{
+		if($('.tabbed_container').length)
+		{
+			//Handle tabs switching
+
+			var tabsContainers = $('.tabbed_container');
+			tabsContainers.each(function()
+			{
+				var tabContainer = $(this);
+				var tabs = tabContainer.find('.tabs ul li');
+				var panels = tabContainer.find('.panel');
+				var sliders = panels.find('.slider');
+
+				tabs.each(function()
+				{
+					var tab = $(this);
+					tab.on('click', function()
+					{
+						panels.removeClass('active');
+						var tabIndex = tabs.index(this);
+						$($(panels[tabIndex]).addClass('active'));
+						sliders.slick("unslick");
+						sliders.each(function()
+						{
+							var slider = $(this);
+							// slider.slick("unslick");
+							if(slider.hasClass('bestsellers_slider'))
+							{
+								initBSSlider(slider);
+							}
+							if(slider.hasClass('featured_slider'))
+							{
+								initFSlider(slider);
+							}
+							if(slider.hasClass('arrivals_slider'))
+							{
+								initASlider(slider);
+							}
+						});
+					});	
+				});
+			});
+		}
 	}
