@@ -487,4 +487,30 @@ $(document).ready(function()
 				fn.target.classList.toggle('active');
 			});
 		}
+    }
+    
+    /* 
+
+	10. Init ZIndex
+
+	*/
+
+	function featuredSliderZIndex()
+	{
+		// Hide slider dots on item hover
+		var items = document.getElementsByClassName('featured_slider_item');
+		
+		for(var x = 0; x < items.length; x++)
+		{
+			var item = items[x];
+			item.addEventListener('mouseenter', function()
+			{
+				$('.featured_slider .slick-dots').css('display', "none");
+			});
+
+			item.addEventListener('mouseleave', function()
+			{
+				$('.featured_slider .slick-dots').css('display', "block");
+			});
+		}
 	}
