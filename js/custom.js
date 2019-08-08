@@ -822,4 +822,35 @@ $(document).ready(function()
 				});
 			}
 		}
+    }
+    
+    /* 
+
+	17. Init Reviews Slider
+
+	*/
+
+	function initReviewsSlider()
+	{
+		if($('.reviews_slider').length)
+		{
+			var reviewsSlider = $('.reviews_slider');
+
+			reviewsSlider.owlCarousel(
+			{
+				items:3,
+				loop:true,
+				margin:30,
+				autoplay:false,
+				nav:false,
+				dots:true,
+				dotsContainer: '.reviews_dots',
+				responsive:
+				{
+					0:{items:1},
+					768:{items:2},
+					991:{items:3}
+				}
+			});
+		}
 	}
