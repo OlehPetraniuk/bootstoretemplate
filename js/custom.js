@@ -677,4 +677,30 @@ $(document).ready(function()
 				}
 			]
 		});
+    }
+    
+    /* 
+
+	14. Init Arrivals Slider ZIndex
+
+	*/
+
+	function arrivalsSliderZIndex()
+	{
+		// Hide slider dots on item hover
+		var items = document.getElementsByClassName('arrivals_slider_item');
+		
+		for(var x = 0; x < items.length; x++)
+		{
+			var item = items[x];
+			item.addEventListener('mouseenter', function()
+			{
+				$('.arrivals_slider .slick-dots').css('display', "none");
+			});
+
+			item.addEventListener('mouseleave', function()
+			{
+				$('.arrivals_slider .slick-dots').css('display', "block");
+			});
+		}
 	}
