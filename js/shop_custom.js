@@ -43,4 +43,35 @@ $(document).ready(function()
 	$(window).on('resize', function()
 	{
 		setHeader();
-	});
+    });
+    
+    /* 
+
+	2. Set Header
+
+	*/
+
+	function setHeader()
+	{
+		//To pin main nav to the top of the page when it's reached
+		//uncomment the following
+
+		// var controller = new ScrollMagic.Controller(
+		// {
+		// 	globalSceneOptions:
+		// 	{
+		// 		triggerHook: 'onLeave'
+		// 	}
+		// });
+
+		// var pin = new ScrollMagic.Scene(
+		// {
+		// 	triggerElement: '.main_nav'
+		// })
+		// .setPin('.main_nav').addTo(controller);
+
+		if(window.innerWidth > 991 && menuActive)
+		{
+			closeMenu();
+		}
+	}
