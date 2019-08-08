@@ -973,7 +973,8 @@ $(document).ready(function()
     			{
     				targetTime = timer.data('target-time');
 					target_date = new Date(targetTime).getTime();
-    			}
+                }
+                
     			else
     			{
     				var date = new Date();
