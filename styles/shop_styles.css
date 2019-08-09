@@ -508,7 +508,7 @@ section
 .top_bar_user a:hover
 {
 	color: #8a8a8a;
-} 
+}
 
 /*********************************
 3.2 Header Main
@@ -1058,7 +1058,7 @@ select option
     color: #FFFFFF;
     text-transform: uppercase;
     margin-right: 16px;
-} 
+}
 
 /*********************************
 3.4 Page Menu
@@ -1651,7 +1651,7 @@ select option
 .page_nav li:last-child
 {
 	border-right: none;
-} 
+}
 
 /*********************************
 6. Shop Sidebar
@@ -1932,7 +1932,7 @@ select option
 .viewed_item.is_new .item_new
 {
 	display: inline-block;
-} 
+}
 
 /*********************************
 8. Brands
@@ -2134,7 +2134,7 @@ select option
 .newsletter_unsubscribe_link a:hover
 {
 	color: #0d82d3;
-} 
+}
 
 /*********************************
 10. Footer
