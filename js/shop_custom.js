@@ -319,4 +319,25 @@ $(document).ready(function()
 		        });
 			});
     	}	
-    }
+	}
+	
+	/* 
+
+	9. Init Favorites
+
+	*/
+
+	function initFavs()
+	{
+		// Handle Favorites
+		var items = document.getElementsByClassName('product_fav');
+		for(var x = 0; x < items.length; x++)
+		{
+			var item = items[x];
+			item.addEventListener('click', function(fn)
+			{
+				fn.target.classList.toggle('active');
+			});
+		}
+	}
+});
